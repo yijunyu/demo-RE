@@ -21,14 +21,28 @@ dependencies {
 task generateXtextLanguageProblem(type: JavaExec) {
 	main = 'org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher'
 	classpath = configurations.mwe2
-	inputs.file "src/main/java/problem/GenerateProblem.mwe2"
-	inputs.file "src/main/java/problem/Problem.xtext"
+	inputs.file "src/main/java/dsl/GenerateProblem.mwe2"
+	inputs.file "src/main/java/dsl/Problem.xtext"
 	outputs.dir "src/main/xtext-gen"
-	args += "src/main/java/problem/GenerateProblem.mwe2"
+	args += "src/main/java/dsl/GenerateProblem.mwe2"
 	args += "-p"
 	args += "rootPath=/${projectDir}/.."
 }
 
+task generateXtextLanguageArgument(type: JavaExec) {
+	main = 'org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher'
+	classpath = configurations.mwe2
+	inputs.file "src/main/java/dsl/GenerateArgument.mwe2"
+	inputs.file "src/main/java/dsl/Argument.xtext"
+	outputs.dir "src/main/xtext-gen"
+	args += "src/main/java/dsl/GenerateArgument.mwe2"
+	args += "-p"
+	args += "rootPath=/${projectDir}/.."
+}
+
+
 generateXtext.dependsOn(generateXtextLanguageProblem)
 clean.dependsOn(cleanGenerateXtextLanguageProblem)
+generateXtext.dependsOn(generateXtextLanguageArgument)
+clean.dependsOn(cleanGenerateXtextLanguageArgument)
 eclipse.classpath.plusConfigurations += [configurations.mwe2]
