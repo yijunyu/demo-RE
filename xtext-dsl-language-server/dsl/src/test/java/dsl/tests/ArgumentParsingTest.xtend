@@ -4,7 +4,7 @@
 package dsl.tests
 
 import com.google.inject.Inject
-import dsl.argument.Argument
+import dsl.argument.ArgumentDiagram
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.testing.util.ParseHelper
