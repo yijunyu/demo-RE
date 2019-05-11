@@ -21,7 +21,7 @@ class ArgumentParsingTest {
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
-			Hello Xtext!
+			argument: A1
 		''')
 		Assert.assertNotNull(result)
 		val errors = result.eResource.errors
