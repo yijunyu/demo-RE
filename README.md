@@ -1,4 +1,4 @@
-# A Browser-based One-Click Requirements Engineering Integrated Development Environment
+# A Browser-based One-Click IDE for Requirements Engineering
 
 This is an [Xtext-based Language Server extension for the Theia IDE](https://github.com/theia-ide/theia-xtext).
 
