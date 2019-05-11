@@ -1,4 +1,4 @@
-module dsl.GenerateProblem
+module problem.GenerateProblem
 
 import org.eclipse.xtext.xtext.generator.*
 import org.eclipse.xtext.xtext.generator.model.project.*
@@ -27,7 +27,7 @@ Workflow {
 			}
 		}
 		language = StandardLanguage {
-			name = "dsl.Problem"
+			name = "problem.Problem"
 			fileExtensions = "problem"
 
 			serializer = {
