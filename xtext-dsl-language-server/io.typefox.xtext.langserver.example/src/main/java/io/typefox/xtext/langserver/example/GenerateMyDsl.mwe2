@@ -33,9 +33,9 @@ Workflow {
 			serializer = {
 				generateStub = false
 			}
-			validator = {
+			// validator = {
 				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-			}
+			// }
 		}
 	}
 }

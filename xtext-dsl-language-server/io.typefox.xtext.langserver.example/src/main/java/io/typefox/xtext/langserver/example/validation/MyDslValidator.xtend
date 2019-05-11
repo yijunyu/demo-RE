@@ -3,9 +3,9 @@
  */
 package io.typefox.xtext.langserver.example.validation
 
-import org.eclipse.xtext.validation.Check
-import io.typefox.xtext.langserver.example.myDsl.ProtocolDefinition
-import io.typefox.xtext.langserver.example.myDsl.MyDslPackage
+// import org.eclipse.xtext.validation.Check
+// import io.typefox.xtext.langserver.example.myDsl.ProtocolDefinition
+// import io.typefox.xtext.langserver.example.myDsl.MyDslPackage
 
 /**
  * This class contains custom validation rules. 
@@ -16,6 +16,7 @@ class MyDslValidator extends AbstractMyDslValidator {
 	
 	public static val INVALID_NAME = 'invalidName'
 
+/*
 	@Check
 	def checkGreetingStartsWithCapital(ProtocolDefinition definition) {
 		if (definition.name.startsWith('foo')) {			
@@ -24,5 +25,6 @@ class MyDslValidator extends AbstractMyDslValidator {
 					INVALID_NAME)
 		}
 	}
+*/
 	
 }
