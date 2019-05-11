@@ -1,4 +1,4 @@
-# An [One-Click IDE](https://gitpod.io#snapshot/96178943-ced5-4aa9-ad96-dee0131c8772) for Requirements Engineering (RE)
+# A [One-Click IDE](https://gitpod.io#snapshot/96178943-ced5-4aa9-ad96-dee0131c8772) for Requirements Engineering (RE)
 
 * Click at "Open Browser" button on the top of the page, 
   a Visual Studio Code IDE will run inside your browser. 
