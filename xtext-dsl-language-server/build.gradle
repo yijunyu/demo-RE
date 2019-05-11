@@ -25,7 +25,7 @@ subprojects {
 	apply plugin: 'idea'
 	apply plugin: 'com.github.johnrengelman.shadow'
 	
-	group = 'io.typefox.xtext.langserver.example'
+	group = 'problem'
 	version = '1.0.0-SNAPSHOT'
 	
 	sourceCompatibility = '1.8'

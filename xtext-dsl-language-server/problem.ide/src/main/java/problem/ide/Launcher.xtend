@@ -1,4 +1,4 @@
-package io.typefox.xtext.langserver.example.ide
+package problem.ide
 
 import com.google.inject.Guice
 import java.net.InetSocketAddress
