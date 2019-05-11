@@ -1,0 +1,26 @@
+A1   "You will get wet!"   {
+    supported by   
+    F1   "It is raining   "  
+    warranted by  
+    DK1   "If it is raining you will get wet     "  
+}
+
+A2   "I am fine    "     round     1   {
+    supported by  
+    F2   "I have a shelter      "     round     1   {
+      supported by  
+      F3   "I am inside a room       "     round     1  
+  }
+    warranted by  
+    DK2   "One will get wet only if it is raining 
+and one does not have a shelter          "   round     1 
+   replacing  DK1 with !DK1 & (F1 & !F2 -> A1)   
+}
+
+A3   "You still will get wet       "     round     2   {
+    supported by  
+    F4   "because the roof is leaky         "     round     2  
+   warranted by  
+    DK3   "Leaky roof removes the shelter       "     round     2    replacing
+F2  with !F2
+}

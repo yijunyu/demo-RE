@@ -1,0 +1,24 @@
+argument: PED
+A1 "Confidentiality and integrity of customers' PIN is assured" {
+	supported by
+		F1 "PED has a tamper proofing mechanism"
+		F2 "There is a tamper proof sealed box around the PED"
+	warranted by
+		A2 "The tamper proofing mechanism guarantees that attempts to
+tamper the PED sealed box will cause data in transit to be deleted, 
+lost or overridden (depending on the mechanism implemented)" with !F1  {
+		warranted by
+			DK1 "Defeating the tamper proofing mechanism
+requires more than 10 hours effort"
+			DK2 "Defeating the tamper proofing mechanism cost
+more than $25,000"
+		}
+		A3 "The PED sealed box is really tamper proof" {
+			supported by
+				F3 "Communication outside the PED box is encrypted"
+			warranted by
+				DK3 "There is no need for an expensive EMV protocol
+implementation to enforce encrypted communication 
+inside the PED box"
+		}
+}

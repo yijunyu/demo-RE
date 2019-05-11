@@ -1,0 +1,5 @@
+argument: HouseIsSafe
+A1 "House is safe" {
+	supported by
+		Fact1 "it is protected by plants"
+}

@@ -1,0 +1,72 @@
+argument: PED
+A1 "Confidentiality and integrity of customers' PIN is assured" {
+	supported by
+		F1 "PED has a tamper proofing mechanism"
+		F2 "There is a tamper proof sealed box around the PED"
+	warranted by
+		A2 "The tamper proofing mechanism guarantees that attempts to
+tamper the PED sealed box will cause data in transit to be deleted, 
+lost or overridden (depending on the mechanism implemented)"{
+		warranted by
+			DK1 "Defeating the tamper proofing mechanism
+requires more than 10 hours effort"
+			DK2 "Defeating the tamper proofing mechanism cost
+more than $25,000"
+	}
+	A3 "The PED sealed box is really tamper proof" {
+		supported by
+			F3 "Communication outside the PED box is encrypted"
+		warranted by
+			DK3 "There is no need for an expensive EMV protocol
+implementation to enforce encrypted communication 
+inside the PED box"
+	}
+}
+A4 "There are attackers with high level of expertise " round 1 {
+supported by
+	F4 "Motivation to obtain PIN is potential financial gain " round 1
+warranted by
+	DK4 "Incentive and expertise ( with some imagination )
+represent enough ingredients to overcome tamper proofing mechanism "round 1
+	replacing DK2 with !DK2
+}
+A5 "Failure in tamper proofing mechanism exposes security of PED
+sealed box"round 1 replacing A3 with !A3{
+supported by
+	F8 "Overcoming PED sealed box allows obtaining clear text PIN" round 1
+warranted by
+	DK6 "Clear text PIN can be obtained not only by
+tampering with the PED sealed box but also by other means such as by
+social engineering applied to the card holders"round 1 
+}
+
+A6 "Weak encryption does not protect PIN " round 1 replacing F3 with !F3{
+supported by
+	F6 "Only strong encryption protects PIN " round 1 
+warranted by
+    A7 "PIN can be cracked if weak encryption is enforced" round 1 {
+		supported by
+			F7 "Time required to crack the encryption algorithm with
+		brute force is reasonable to be achieved"round 1
+		warranted by
+			A8 "There are people with physical access to the PED box for long
+		periods "round 1 replacing DK1 with !DK1{
+				supported by
+					F5 "Merchants and PED administrators are in a position to deal
+		with the PED without raising suspicion "round 1
+				warranted by
+					DK5 "Long term access to PED allows try-and-error 
+		or sophisticated methods to be used for overcoming 
+		PED tamper proofing mechanism "round 1
+		}
+	}
+}
+
+A9 "Other mechanisms are applied to track activities of
+merchants and PED administrators" round 2 replacing A4 with DK2 & !A4{
+supported by
+	F10 "Recording from surveillance cameras helps to
+reconstruct some activities performed by merchants and administrators"round 2
+	F11 "Dual control policies helps to minimize risk of
+administrators misuse of the PED"round 2
+}

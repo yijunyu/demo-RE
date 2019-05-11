@@ -1,0 +1,13 @@
+argument: HouseIsSafe
+A1 "House is safe" {
+	supported by
+		Fact1 "it is protected by plants"
+}
+A2 "House is not safe" round 1 with !A1 {
+	supported by
+		Fact4 "zombies can enter the house" round 1 replacing Fact1 with !Fact1{
+			supported by
+				Fact2 "zombies are coming" round 1
+				Fact3 "zombies eat plants" round 1
+		}
+}

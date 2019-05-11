@@ -9,7 +9,8 @@ A1 "The ATM system remains secure after introducing AMAN" {
 	and Meteo services to collect all info"
 		F4 "The actors are interconnected by the SWIM"
 }
-A2 "The operator Sequence Manager can be untrustable" round 1 replacing F1 with ! F1 {
+A2 "The operator Sequence Manager can be untrustable" round 1 replacing
+F1 with ! F1{
 	supported by
 		F5 "The Sequence Manager can have 
      malicious intent"round 1
