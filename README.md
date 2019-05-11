@@ -9,7 +9,7 @@ It current supports the following Requirements Engineering (RE) languages:
 
 
 ## [Use in Gitpod](https://gitpod.io#snapshot/96178943-ced5-4aa9-ad96-dee0131c8772)
-* Click at "Open In Browser", you will get a working IDE, which has already been started by the following script:
+* Click at "Open Browser", you will get a working IDE, which has already been started by the following script:
 ```bash
 cd app && yarn start
 ```
