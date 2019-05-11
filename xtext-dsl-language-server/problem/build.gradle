@@ -30,5 +30,5 @@ task generateXtextLanguageProblem(type: JavaExec) {
 }
 
 generateXtext.dependsOn(generateXtextLanguageProblem)
-clean.dependsOn(cleanGenerateXtextLanguage)
+clean.dependsOn(cleanGenerateXtextLanguageProblem)
 eclipse.classpath.plusConfigurations += [configurations.mwe2]
