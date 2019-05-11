@@ -7,7 +7,7 @@
 
 [![Initial screen](doc/screenshot-click.png)](https://gitpod.io#snapshot/96178943-ced5-4aa9-ad96-dee0131c8772)
 
-* Click at the folders on the navigator, you will see editable examples of the following RE languages. You can easily open multiple examples to edit side-by-side.
+* Click at the folders on the navigator, you will see editable examples of the following RE languages. You can easily open multiple examples to edit them side-by-side.
 
 ![Usage](doc/screenshot-use.png)
 
