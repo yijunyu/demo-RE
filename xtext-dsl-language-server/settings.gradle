@@ -1,2 +1,4 @@
-include 'dsl'
-include 'dsl.ide'
+include 'problem'
+include 'problem.ide'
+include 'argument'
+include 'argument.ide'

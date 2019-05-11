@@ -1,4 +1,4 @@
-package dsl.ide
+package problem.ide
 
 import com.google.inject.Guice
 import java.net.InetSocketAddress
