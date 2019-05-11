@@ -1,7 +1,4 @@
-rm -rf */src/main/x*
-rm -rf io.typefox.xtext.langserver.example/build/classes
-rm -rf io.typefox.xtext.langserver.example/model/generated
-find . -name *MyDsl* | xargs rm -rf 
+git ls-files -o | xargs rm -rf
 gradle build \
 	&& gradlew shadowJar \
 	&& cp $(find . -name Problem.ecore) ../example-workspace/problem/ \
