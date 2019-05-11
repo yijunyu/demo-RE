@@ -9,6 +9,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "xtext-problem-extension", "app"
+    "xtext-problem-extension", "xtext-argument-extension", "app"
   ]
 }

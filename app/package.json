@@ -31,7 +31,8 @@
     "@theia/typescript": "next",
     "@theia/userstorage": "next",
     "@theia/workspace": "next",
-    "@theia/xtext-problem-extension": "0.1.0"
+    "@theia/xtext-problem-extension": "0.1.0",
+    "@theia/xtext-argument-extension": "0.1.0"
   },
   "devDependencies": {
     "@theia/cli": "next"
