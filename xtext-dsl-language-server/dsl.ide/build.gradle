@@ -1,11 +1,11 @@
 dependencies {
-	compile project(':problem')
+	compile project(':dsl')
 	compile "org.eclipse.xtext:org.eclipse.xtext.ide:${xtextVersion}"
 	compile "org.eclipse.xtext:org.eclipse.xtext.xbase.ide:${xtextVersion}"
 }
 
 shadowJar {
-	baseName = 'problem-language-server'
+	baseName = 'dsl-language-server'
 	classifier = null
 	version = null
 	manifest {

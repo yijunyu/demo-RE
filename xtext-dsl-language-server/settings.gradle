@@ -1,2 +1,2 @@
-include 'problem'
-include 'problem.ide'
+include 'dsl'
+include 'dsl.ide'

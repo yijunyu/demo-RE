@@ -1,0 +1,37 @@
+grammar problem.Problem with org.eclipse.xtext.common.Terminals
+generate problem "http://open.ac.uk/problem"
+ProblemDiagram: "problem:" name=ID ("for" highlight=[Node])?
+	((nodes+=Node | links+=Link))*;
+
+Node:
+	name=ID (type=NodeType)?
+	((":")? description=STRING)?
+	("{"
+	(hiddenPhenomena+=Phenomenon (',' hiddenPhenomena+=Phenomenon)*)?
+	(subproblem+=ProblemDiagram
+	| "see" "domain" problemNodeRef+=[Node]
+	| "see" "problem" problemRef+=[ProblemDiagram]
+	| "see" href+=STRING)*
+	"}")?;
+
+enum NodeType:
+	REQUIREMENT="R" | MACHINE="M" | BIDDABLE="B" | LEXICAL="X" | CAUSAL="C" | DESIGNED="D" | PHYSICAL="P" | CONCERN="?";
+
+Phenomenon:
+	(type=PhenomenonType)? (isControlled?="!")? name=ID ((":")? description=STRING)?;
+
+enum PhenomenonType:
+	UNSPECIFIED="phenomenon" | EVENT="event" | STATE="state";
+
+Link:
+	from=[Node] (type=LinkType) to=[Node] ('{' phenomena+=Phenomenon (',' phenomena+=Phenomenon)*
+	'}')?
+	((":")? description=STRING)?;
+
+enum LinkType:
+	INTERFACE="--" | REFERENCE="~~" | CONSTRAINT="<~" | CONCERN="->" | INV_CONSTRAINT="~>";
+
+terminal ID: ('#' (!('#'))+ '#') |
+  ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);
+  
+terminal QUALIFIED_NAME : ID ('.' ID)*;  
