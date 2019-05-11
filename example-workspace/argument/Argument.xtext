@@ -1,6 +1,6 @@
 grammar argument.Argument with org.eclipse.xtext.common.Terminals
-import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-generate argument "http://sead1.open.ac.uk/argument/Argument"
+// import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate argument "http://sead.open.ac.uk/argument/Argument"
 
 ArgumentDiagram: ("argument:" name=ID)?
         ((nodes+=Argument | links+=Link))*;
@@ -66,12 +66,11 @@ TerminalExpression:
         | {BooleanLiteral} value=BOOLEAN
         | {Argument} value=[Argument];
 
-terminal INT returns ecore::EInt:
-        '0' | '1'..'9' ('0'..'9')*;
+// terminal INT /* returns ecore::EInt */: 
+//        '0' | '1'..'9' ('0'..'9')*;
 
-terminal BOOLEAN returns ecore::EBoolean:
+terminal BOOLEAN /* returns ecore::EBoolean */:
         'true' | 'false';
-
 terminal ID: ('#' (!('#'))+ '#') |
   ('^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*);
 
