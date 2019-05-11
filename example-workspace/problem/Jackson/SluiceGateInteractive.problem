@@ -1,0 +1,17 @@
+problem: #Sluice Gate: respond to command by the operator#
+
+OC R :"Obey Command" 
+
+IC M :"Interactive Controller" 
+
+G C :"Gate" 
+
+O B : "Operator"
+
+IC -- G :"a"
+
+OC ~> G :"b"
+
+IC -- O : "c"
+
+OC ~~ O : "c"

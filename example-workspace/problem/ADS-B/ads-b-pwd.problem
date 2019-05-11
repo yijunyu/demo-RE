@@ -1,0 +1,46 @@
+problem: TheADS_Bproblem
+
+Operator--CWP
+{event EnterWeatherInfo, state GetInformed} "a"
+
+ADS_B->TA
+
+CWP--CP "g"
+
+GPS--Aircrafts "b"
+
+ADS_B--Aircrafts "c"
+
+ADS_B--CP "d"
+
+CP--Display "f"
+
+CP--Aircrafts "e"
+
+MSoD~>Aircrafts "r"
+
+TA ? "Trust assumption: 
+ADS-B functions correctly!"
+
+MSoD "Maintain the Safety Distance" {
+see "/Examples/event/sit1.e"
+see "/Examples/event/sit2.e"
+see "/Examples/event/sit3.e"
+see "/Examples/event/sit4.e"
+see "/Examples/istar/open_account.ood" // just a demo
+}
+
+CP M "Central Processor" { problem: TheCentralProcessorProblem for CPU
+CPU M "Central Processing Unit" }
+
+ADS_B C "Ground Receivers"
+
+Display C "ATC Display"
+
+Operator B "ATC Operator"
+
+GPS B "Satellites"
+
+Aircrafts C
+
+CWP X "Controller Working Position"

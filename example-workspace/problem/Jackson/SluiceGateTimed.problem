@@ -1,0 +1,13 @@
+problem: #Sluice Gate: open for the first ten minutes of every three-hour period#
+
+GR R :"Gate Regime" 
+
+TC M :"Timed Controller" 
+
+G C :"Gate" 
+
+TC -- G
+:"a"
+
+GR ~> G
+:"b"

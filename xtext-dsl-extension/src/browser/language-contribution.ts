@@ -4,8 +4,8 @@ import { Workspace, Languages, LanguageClientFactory, BaseLanguageClientContribu
 @injectable()
 export class DslClientContribution extends BaseLanguageClientContribution {
 
-    readonly id = "dsl";
-    readonly name = "DSL";
+    readonly id = "problem";
+    readonly name = "Problem";
 
     constructor(
         @inject(Workspace) protected readonly workspace: Workspace,
@@ -17,7 +17,7 @@ export class DslClientContribution extends BaseLanguageClientContribution {
 
     protected get globPatterns() {
         return [
-            '**/*.dsl'
+            '**/*.problem'
         ];
     }
 }
@@ -28,12 +28,12 @@ registerDSL();
 export function registerDSL() {
     // initialize monaco
     monaco.languages.register({
-        id: 'dsl',
-        aliases: ['DSL', 'dsl'],
-        extensions: ['.dsl'],
-        mimetypes: ['text/dsl']
+        id: 'problem',
+        aliases: ['Problem', 'problem'],
+        extensions: ['.problem'],
+        mimetypes: ['text/problem']
     })
-    monaco.languages.setLanguageConfiguration('dsl', {
+    monaco.languages.setLanguageConfiguration('problem', {
         comments: {
             lineComment: "//",
             blockComment: ['/*', '*/']
@@ -49,7 +49,7 @@ export function registerDSL() {
                 close: ')'
             }]
     })
-    monaco.languages.setMonarchTokensProvider('dsl', <any>{
+    monaco.languages.setMonarchTokensProvider('problem', <any>{
         // Set defaultToken to invalid to see what you do not tokenize yet
         // defaultToken: 'invalid',
 

@@ -1,0 +1,17 @@
+problem: #Workpiece#
+
+CE R :"Command Effects" 
+
+ET M :"Editing Tool" 
+
+U B :"User"
+
+WP X : "Workpiece"
+
+ET -- U : "b"
+
+ET -- WP : "c"
+
+CE ~> WP : "d"
+
+CE ~~ U : "a"

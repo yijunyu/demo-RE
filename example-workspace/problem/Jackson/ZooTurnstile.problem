@@ -1,0 +1,28 @@
+problem: #Zoo turnstile#
+
+NoFreeEntry R :"Prevent Free Entry" 
+
+TC M :"Turnstile Controller" 
+
+T C :"Turnstile" 
+
+
+Z C : "Zoo"
+
+ZC B : "Zoo Customer"
+
+TC -- T
+:"a"
+
+T -- Z
+:"c"
+
+T -- ZC
+:"b"
+
+ZC -- Z
+:"d"
+
+NoFreeEntry ~> Z
+
+NoFreeEntry ~~ ZC

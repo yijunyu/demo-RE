@@ -1,0 +1,6 @@
+problem: CommandedBehaviour
+CD<~RB "a"
+CM--CD "b"
+RB "Required Behavior"
+CM M "Control Machine"
+CD C "Controlled Domain"

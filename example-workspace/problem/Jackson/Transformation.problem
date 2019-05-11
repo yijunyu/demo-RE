@@ -1,0 +1,17 @@
+problem: #Transformation#
+
+IOR R :"IO Relation" 
+
+TM M :"Transform Machine" 
+
+I X : "Input"
+
+O X : "Output"
+
+TM -- I :"b"
+
+TM -- O : "c"
+
+IOR ~> O :"d"
+
+IOR ~~ I : "a"

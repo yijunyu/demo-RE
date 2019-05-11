@@ -28,8 +28,8 @@ function getPort(): number | undefined {
 @injectable()
 class DSLContribution extends BaseLanguageServerContribution {
 
-    readonly id = "dsl";
-    readonly name = "DSL";
+    readonly id = "problem";
+    readonly name = "Problem";
 
     start(clientConnection: IConnection): void {
         let socketPort = getPort();

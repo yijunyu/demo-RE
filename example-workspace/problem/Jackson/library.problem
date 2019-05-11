@@ -1,0 +1,31 @@
+problem: Library //example in Michael Jackson's book [Jackson01]
+
+RNR R // requirement
+:"Register New Reader"
+
+LD X // lexical domain
+:"Library Database "
+
+ID D // designed domain 
+:"Input Device "
+
+LM B // biddable domain
+:"Library Member "
+
+RH M // machine domain
+:"Registration Handler "
+
+LM -- ID // shared phenomena
+ {event NewReaderRecord }: "a"
+
+ID -- RH // shared phenomena
+ {event commands} : "b"
+
+RH -- LD // shared phenomena
+ {event ReaderRecord} : "c"
+
+LM ~~ RNR // reference phenomena
+ {state PersonalDetails }: "d"
+
+LD ~> RNR // constraint phenomena
+ {state MembershipDetails}: "e"

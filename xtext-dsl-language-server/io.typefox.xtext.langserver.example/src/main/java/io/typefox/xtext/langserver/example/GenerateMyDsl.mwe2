@@ -28,14 +28,11 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "io.typefox.xtext.langserver.example.MyDsl"
-			fileExtensions = "dsl"
+			fileExtensions = "problem"
 
 			serializer = {
 				generateStub = false
 			}
-			// validator = {
-				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-			// }
 		}
 	}
 }

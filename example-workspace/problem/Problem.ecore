@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="problem" nsURI="http://open.ac.uk/problem" nsPrefix="problem">
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="problem"
+    nsURI="http://open.ac.uk/problem" nsPrefix="problem">
   <eClassifiers xsi:type="ecore:EClass" name="ProblemDiagram">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="highlight" eType="#//Node"/>
@@ -32,7 +34,6 @@
     <eLiterals name="CAUSAL" value="4" literal="C"/>
     <eLiterals name="DESIGNED" value="5" literal="D"/>
     <eLiterals name="PHYSICAL" value="6" literal="P"/>
-    <eLiterals name="CONCERN" value="7" literal="?"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Phenomenon">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PhenomenonType"/>
@@ -56,8 +57,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="LinkType">
     <eLiterals name="INTERFACE" literal="--"/>
     <eLiterals name="REFERENCE" value="1" literal="~~"/>
-    <eLiterals name="CONSTRAINT" value="2" literal="&lt;~"/>
-    <eLiterals name="CONCERN" value="3" literal="->"/>
-    <eLiterals name="INV_CONSTRAINT" value="4" literal="~>"/>
+    <eLiterals name="CONSTRAINT" value="2" literal="~>"/>
   </eClassifiers>
 </ecore:EPackage>

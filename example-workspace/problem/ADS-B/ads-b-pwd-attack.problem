@@ -1,0 +1,36 @@
+problem: #ADS-B Attack#
+
+Collide R: "anti-requirement"
+Aircrafts C
+
+Airspace B
+
+SSS C: "Secondary Surveillance System"
+
+PSS C: "Primary Surveillance System"
+
+CP M: "Central Processor"
+
+Display C: "ATC Display"
+
+Operator B: "ATC Operator"
+
+Operator -- CP: "h1"
+
+CP -- Display: "h2"
+
+PSS -- CP: "d"
+
+SSS -- CP: "f"
+
+CP -- Aircrafts: "g"
+
+Airspace -- PSS: "c1"
+
+PSS -- Airspace: "c2"
+
+Airspace -- SSS: "e1"
+
+Aircrafts -- Airspace:"b"
+
+Collide ~> Aircrafts: "a"   
