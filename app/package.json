@@ -39,7 +39,7 @@
   },
   "scripts": {
     "prepare": "theia build",    
-    "start": "theia start ./../example-workspace",
+    "start": "theia start /root/demo-RE/example-workspace",
     "watch": "theia build --watch"
   },
   "theia": {

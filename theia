@@ -1,0 +1,3 @@
+docker kill $(docker inspect theia --format='{{.Id}}')
+docker build -t theia docker
+docker run --rm --name theia -it -d --init -p 3000:3000 -p 8002:8002 -v "$(pwd):/home/project:cached" theia
